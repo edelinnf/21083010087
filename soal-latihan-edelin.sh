@@ -1,10 +1,18 @@
-echo -n "Bilangan pertama = "
-read bil1
-echo -n "Bilangan kedua = "
-read bil2
-jumlah=`expr $bil1 + $bil2`
-bagi=`expr $bil1 / $bil2`
+echo "Bilangan pertama a= "
+read a
+echo "Bilangan kedua b= "
+read b
 
-echo "Jumlah kedua bilangan adalah $jumlah"
-echo "Perkalian kedua bilangan adalah $bagi"
+if [ $a -eq $b ]
+then
+	echo "$a sama dengan $b"
+elif [ $a -gt $b ]
+then
+	echo "$a lebih dari $b"
+elif [ $a -lt $b ]
+then
+	echo "$a kurang dari $b"
+else
+	echo "Tidak ada kondisi yang memenuhi"
+fi
 
